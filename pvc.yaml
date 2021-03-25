@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: aws-managed-disk-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce #ReadWriteMany Read 
+  storageClassName: managed-premium-retain-sc
+  resources:
+    requests:
+      storage: 5Gi
