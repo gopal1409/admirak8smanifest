@@ -1,0 +1,15 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: managed-premium-retain-sc 
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: kubernetes.io/aws-ebs
+reclaimPolicy: Retain #default it is deleted
+volumeBindingMode: WaitForFirstConsumer #the default is immediate. 
+allowVolumeExpansion: true
+parameters:
+  type: gp2
+  fsType: ext4
+
+
