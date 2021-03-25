@@ -20,10 +20,6 @@ spec:
         env:
           - name: MYSQL_ROOT_PASSWORD
             value: dbpassword11
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 3306
           name: mysql 
