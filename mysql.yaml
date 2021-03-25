@@ -24,7 +24,7 @@ spec:
         - containerPort: 3306
           name: mysql 
         volumeMounts:
-          - name: mysql-persistent-storage
+          - name: aws-managed-disk-pvc
             mountPath: /var/lib/mysql 
           - name: usermanagement-dbcreation-script
             mountPath: /docker-entrypoint-initdb.d
